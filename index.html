@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Grandes sociologos contemporaneos</title>
+</head>
+
+<body>
+    <div id="contenedor-principal">
+        <div class="imagen">
+            <img id="imagen-lateral" src="img/pexels-pixabay-159711.jpg" alt="libros">
+        </div>
+        <div id="cuerpo">
+            <header>
+                <h1>Grandes sociólogos del siglo XX</h1>
+            </header>
+            <main>
+                <div class="sociologos">
+                    <div id="Luhmann">
+                        <dl hidden>
+                            <dt>Nombre</dt> 
+                            <dd>Niklas Luhmann</dd>
+                            <dt>Nacimiento</dt>
+                            <dd>Lüneburg, 8 de diciembre de 1927</dd>
+                        </dl>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/HSGH_022-000941_Niklas_Luhmann_%28cropped%29.png/330px-HSGH_022-000941_Niklas_Luhmann_%28cropped%29.png"
+                            alt="Niklas Luhmann">
+                    </div>
+                    <div id="Bourdieu">
+                        <dl hidden>
+                            <dt>Nombre</dt> 
+                            <dd>Pierre Bourdieu</dd>
+                            <dt>Nacimiento</dt>
+                            <dd>Denguin, 1 de agosto de 1930</dd>
+                        </dl>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pierre_Bourdieu_%281%29.jpg/330px-Pierre_Bourdieu_%281%29.jpg"
+                            alt="Pierre Bourdieu">
+                    </div>
+                    <div id="White">
+                        <dl hidden>
+                            <dt>Nombre</dt> 
+                            <dd>Harrison White</dd>
+                            <dt>Nacimiento</dt>
+                            <dd>Washington D.C., 1 de marzo de 1930</dd>
+                        </dl>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Harrisonwhite.jpg/330px-Harrisonwhite.jpg"
+                            alt="Harrison White">
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div>
+                    <div>
+                        <span>@javierweiss 2024</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        /*
+        Variables
+        Objetos
+        Colecciones
+        Funciones
+
+        Distinguir declaración de la invocación
+        */
+       let a = 10;
+       a = 100;
+       var b = 20
+       var c = a + 8151 + b;
+       
+       function sumar(a, b){
+         return a + b;
+       }
+
+       // Recibir 1 argumento
+       // String 
+       // Devolver un Saludo
+       // saludar('Juan') => '¡Hola Juan!'
+
+       function saludar(nombre){
+         return "Hola " + nombre;
+       }
+
+       function saludar2(nombre){
+         return `¡Hola ${nombre}!`;
+       }
+
+       const persona = {
+         nombre: 'Maria Jimenez',
+         tlf: '5231-5689',
+         dni: 169333,
+         saludar: function(){
+            console.log('Acabo de entrar a la función debuggear');
+         }
+       }
+      // console.log(persona.dni)
+      // console.log(persona.saludar())
+
+      //console.log(autores);
+
+/////////////// Viernes 13/9/2024 ////////////////////////////////////////////////
+
+       function Autor(nombre, nacimiento){
+        this.nombre = nombre;
+        this.nacimiento = nacimiento;
+       }
+
+       //const luhmann = new Autor("Niklas Luhmann", "Lüneburg, 8 de diciembre de 1927");
+       //const white = new Autor("Harrison White", "Washington D.C., 1 de marzo de 1930");
+       //const bourdieu = new Autor("Pierre Bourdieu", "Denguin, 1 de agosto de 1930");
+
+       function al_hacer_click(e, id){
+        document.getElementById(id).children[0].hidden = false;
+        document.getElementById(id).children[1].hidden = true;  
+       }
+       
+       function al_hacer_doble_click(e, id){
+        document.getElementById(id).children[1].hidden = false;
+        document.getElementById(id).children[0].hidden = true;
+       }
+
+       const id_luhmann = "Luhmann";
+       const luhmann_texto  =  document.getElementById('Luhmann').children[1].addEventListener('click', (e) => al_hacer_click(e, id_luhmann));
+       const luhmann_imagen  =  document.getElementById('Luhmann').children[0].addEventListener('dblclick',(e) => al_hacer_doble_click(e, id_luhmann));
+       
+       const id_bourdieu = "Bourdieu"
+       const bourdieu_texto =  document.getElementById('Bourdieu').children[1].addEventListener('click',al_hacer_click);
+       const bourdieu_imagen =  document.getElementById('Bourdieu').children[0].addEventListener('dblclick',al_hacer_doble_click);
+       
+       const id_white = "White"
+       const white_texto = document.getElementById('White').children[1].addEventListener('click',al_hacer_click);
+       const white_imagen = document.getElementById('White').children[0].addEventListener('dblclick', al_hacer_doble_click);
+
+       /*
+       const luh_item = document.getElementsByClassName('sociologos')[0].children.Luhmann
+       const whi_item = document.getElementsByClassName('sociologos')[0].children.White
+       const bour_item = document.getElementsByClassName('sociologos')[0].children.Bourdieu
+
+       console.log(luh_item.children)
+       console.log(whi_item.children)
+       console.log(bour_item.children)
+       */
+       
+    </script>
+</body>
+
+</html>
